@@ -5,30 +5,39 @@
     <title>Title</title>
 </head>
 <body>
+
 <table style="width:30%">
     <tr>
-        <form action="#" method="post" name="chuyendoitien">
-            <th>Amount<br/> <input type="text" id="amount" name="Amount"/> </th>
 
-    <th> Form Currency<br/> <select>
-        <option value="Việt Nam">Việt Nam</option></select></th>
+        <th>Amount<br/> <input type="text" id="amount" name="Amount"/></th>
 
-    <th> To Currency<br/> <select>
-        <option value="USD">USA</option></select></select></th>
+        <th> Form Currency<br/>
+            <select>
+                <option value="Việt Nam"> Việt Nam
+                </option
+                >
+            </select></th>
 
-        <th><button tybe="button" onclick="showMessage()";>Convert</button></th>
+        <th> To Currency<br/>
+            <select>
+                <option value="USD">USA</option>
+            </select>
+            </select></th>
+
+        <th>
+            <button tybe="button" onclick="showMessage()" ;>Convert</button>
+        </th>
     </tr>
 </table>
+<p id="a"></p>
+<script>
+    function showMessage() {
+        let amount = parseInt(document.getElementById("amount").value);
+        let a = amount / 23000;
+        document.getElementById("a").innerHTML = "Result: " + a + " USD";
+    }
+</script>
 
-    <script>
-        function showMessage() {
-            let amount= document.getElementById("amount").value;
-            let a;
-            a= amount/23000;
-            alert(a +" USD");
-        }
-    </script>
 
-</form>
 </body>
 </html>
